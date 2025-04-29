@@ -31,11 +31,9 @@ header {
     grid-row: 1 / 2;
 }
 
-header p{
-    margin: 0;
-    text-align: right;
+header img{
+    border-radius: 50%;
 }
-
 main {
     background-color: var(--gray);
     grid-column: 2 / 3;
