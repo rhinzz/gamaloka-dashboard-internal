@@ -1,23 +1,29 @@
-:root{
+:root {
     --white: #fff;
+    --neutral-color: #e6e6e6;
     --gray: #f8f8f8;
+    --dark-gray: #666;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-size: 14px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--gray);
 }
 
-body{
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-/* main{
-    background-color: var(--gray);
-} */
 section {
     background-color: var(--white);
+    border-right: 1px solid var(--neutral-color);
     height: 100vh;
     overflow-x: auto;
     overflow-y: hidden;
+}
+
+.link-body-emphasis {
+    color: var(--dark-gray) !important;
 }
