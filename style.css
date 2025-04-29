@@ -1,4 +1,6 @@
 :root {
+    --brand-color-50: #FFF4e9;
+    --primary: #ff8b13;
     --white: #fff;
     --neutral-color: #e6e6e6;
     --gray: #f8f8f8;
@@ -16,12 +18,17 @@ body {
     background-color: var(--gray);
 }
 
-section {
+aside {
     background-color: var(--white);
     border-right: 1px solid var(--neutral-color);
     height: 100vh;
     overflow-x: auto;
     overflow-y: hidden;
+}
+
+aside .nav-pills{
+    --bs-nav-pills-link-active-bg: var(--brand-color-50);
+    --bs-nav-pills-link-active-color: var(--primary);
 }
 
 .link-body-emphasis {

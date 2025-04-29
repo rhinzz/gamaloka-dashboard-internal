@@ -18,14 +18,14 @@
 
 <body>
     <header class="header"></header>
-    <section class="d-flex flex-column flex-shrink-0 px-3 py-4" style="width: 280px;">
+    <aside id="sidebar" class="d-flex flex-column flex-shrink-0 px-3 py-4" style="width: 280px;">
         <a href="/" class="d-flex align-items-center justify-content-center mb-4 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <img src="./assets/logo.png" alt="gamaloka-logo" width="137" height="30">
         </a>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item p-1 mb-2">
                 <a href="#" class="d-flex align-items-center nav-link fw-semibold active" >
-                    <img class="bi me-3" src="./assets/icon/home.svg" width="20" height="20" alt="talent">
+                    <img class="bi me-3" src="./assets/icon/active/home.svg" width="20" height="20" alt="talent">
                     Dashboard
                 </a>
             </li>
@@ -65,8 +65,19 @@
                     Blasting
                 </a>
             </li>
+            <li class="p-1 mb-2">
+                <a href="#" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="false" aria-controls="settings">
+                    <img class="bi me-3" src="./assets/icon/settings.svg" alt="settings">
+                    Settings
+                </a>
+                <ul id="settings" class="list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item"><a href="#" class="sidebar-link nav-link fw-semibold link-body-emphasis">Link</a></li>
+                    <li class="sidebar-item"><a href="#" class="sidebar-link nav-link fw-semibold link-body-emphasis">Link</a></li>
+                    <li class="sidebar-item"><a href="#" class="sidebar-link nav-link fw-semibold link-body-emphasis">Link</a></li>
+                </ul>
+            </li>
         </ul>
-    </section>
+    </aside>
     <main class="main"></main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
