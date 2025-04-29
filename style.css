@@ -31,6 +31,14 @@ aside .nav-pills{
     --bs-nav-pills-link-active-color: var(--primary);
 }
 
+aside .collapse-transition {
+    transition: height 0.2s ease;
+    overflow: hidden;
+}
+aside #settings{
+    margin-left: 2.25rem;
+}
+
 .link-body-emphasis {
     color: var(--dark-gray) !important;
 }
