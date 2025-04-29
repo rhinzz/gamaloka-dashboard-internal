@@ -7,6 +7,10 @@
     --dark-gray: #666;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body,
 html {
     height: 100%;
@@ -15,18 +19,35 @@ html {
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 60px 1fr;
     background-color: var(--gray);
+}
+
+header {
+    background-color: var(--white);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+main {
+    background-color: var(--gray);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 aside {
     background-color: var(--white);
     border-right: 1px solid var(--neutral-color);
     height: 100vh;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
-aside .nav-pills{
+aside .nav-pills {
     --bs-nav-pills-link-active-bg: var(--brand-color-50);
     --bs-nav-pills-link-active-color: var(--primary);
 }
@@ -35,7 +56,8 @@ aside .collapse-transition {
     transition: height 0.2s ease;
     overflow: hidden;
 }
-aside #settings{
+
+aside #settings {
     margin-left: 2.25rem;
 }
 
@@ -47,6 +69,6 @@ aside .dropdown-arrow.rotate {
     transform: rotate(180deg);
 }
 
-.link-body-emphasis {
+aside .link-body-emphasis {
     color: var(--dark-gray) !important;
 }

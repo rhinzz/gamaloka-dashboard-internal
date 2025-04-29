@@ -1,7 +1,5 @@
 const collapseElement = document.getElementById('settings');
-const arrow = collapseElement
-    .closest('li')
-    .querySelector('.dropdown-arrow');
+const arrow = collapseElement.closest('li').querySelector('.dropdown-arrow');
 
 collapseElement.addEventListener('show.bs.collapse', () => {
     arrow.classList.add('rotate');
