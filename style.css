@@ -39,6 +39,14 @@ aside #settings{
     margin-left: 2.25rem;
 }
 
+aside .dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+aside .dropdown-arrow.rotate {
+    transform: rotate(180deg);
+}
+
 .link-body-emphasis {
     color: var(--dark-gray) !important;
 }
