@@ -10,8 +10,10 @@ collapseElement.addEventListener('hide.bs.collapse', () => {
     arrow.classList.remove('rotate');
 });
 
+
 // Sample Donut Chart
-var yValues = [55, 49, 44, 24, 15];
+var xValues = ["Jabodetabek", "Bandung", "Medan", "Jateng & DIY", "Jatim", "Bali"];
+var yValues = [34, 34, 34, 34, 34, 34];
 var barColors = [
     "#b91d47",
     "#00aba9",
@@ -20,7 +22,7 @@ var barColors = [
     "#1e7145"
 ];
 
-new Chart("myChart", {
+new Chart("firstChart", {
     type: "doughnut",
     data: {
         labels: xValues,
@@ -32,7 +34,40 @@ new Chart("myChart", {
     options: {
         title: {
             display: true,
-            text: "World Wide Wine Production 2018"
+            text: "Subscriber"
+        },
+        legend: {
+            position: "right"
+        }
+    },
+});
+
+var xValues = ["Jabodetabek", "Bandung", "Medan", "Jateng & DIY", "Jatim", "Bali"];
+var yValues = [34, 34, 34, 34, 34, 34];
+var barColors = [
+    "#b91d47",
+    "#00aba9",
+    "#2b5797",
+    "#e8c3b9",
+    "#1e7145"
+];
+
+new Chart("secondChart", {
+    type: "doughnut",
+    data: {
+        labels: xValues,
+        datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            text: "Unsubscriber"
+        },
+        legend: {
+            position: "right"
         }
     }
 });

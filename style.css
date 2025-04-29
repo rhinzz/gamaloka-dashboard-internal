@@ -47,6 +47,8 @@ main {
 main .card{
     border: none;
     border-radius: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 main .card:nth-child(2n-1):last-child {
