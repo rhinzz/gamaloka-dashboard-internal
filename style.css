@@ -1,0 +1,17 @@
+:root{
+    --white: #fff;
+    --gray: #f8f8f8;
+}
+
+body, html {
+    height: 100%;
+}
+main{
+    background-color: var(--gray);
+}
+section {
+    background-color: var(--white);
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
