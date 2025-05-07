@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dashboard Internal</title>
+</head>
+
+<body>
+    <header class="header d-flex gap-3 align-items-center justify-content-end py-3 px-5">
+        <a class="mx-2" href="#">
+            <img src="./assets/icon/bell.svg" alt="notification">
+        </a>
+        <img src="./assets/icon/sample/profile.jpg" alt="profile-picture" width="40" height="40">
+        <div class="name">
+            <p class="text-dark fw-semibold m-0 pb-1">Ivony Anastasia</p>
+            <p class="text-secondary m-0">Superadmin</p>
+        </div>
+    </header>
+    <aside id="sidebar" class="d-flex flex-column flex-shrink-0 px-3 py-4">
+        <a href="/"
+            class="d-flex align-items-center justify-content-center mb-4 link-body-emphasis text-decoration-none">
+            <img src="./assets/logo.png" alt="gamaloka-logo" width="137" height="30">
+        </a>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item p-1 mb-2">
+                <a href="./index.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="./assets/icon/home.svg" width="20" height="20" alt="talent">
+                    Dashboard
+                </a>
+            </li>
+            <li class="p-1 mb-2">
+                <a href="./applicant.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="./assets/icon/applicant.svg" width="20" height="20" alt="talent">
+                    Applicant
+                </a>
+            </li>
+            <li class="p-1 mb-2">
+                <a href="./job.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="./assets/icon/job.svg" width="20" height="20" alt="talent">
+                    Job
+                </a>
+            </li>
+            <li class="p-1 mb-2">
+                <a href="./merchant.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="./assets/icon/merchant.svg" width="20" height="20" alt="talent">
+                    Merchant
+                </a>
+            </li>
+            <li class="p-1 mb-2">
+                <a href="./talent.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="./assets/icon/talent.svg" width="20" height="20" alt="talent">
+                    Talent Request
+                </a>
+            </li>
+            <li class="p-1 mb-2">
+                <a href="#" class="d-flex align-items-center nav-link fw-semibold active">
+                    <img class="bi me-3" src="./assets/icon/active/premium.svg" width="20" height="20" alt="talent">
+                    Premium Plan
+                </a>
+            </li>
+            <li class="p-1 mb-2">
+                <a href="./blasting.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="./assets/icon/blasting.svg" width="20" height="20" alt="talent">
+                    Blasting
+                </a>
+            </li>
+            <li class="p-1 mb-2">
+                <a href="#"
+                    class="d-flex align-items-center nav-link fw-semibold link-body-emphasis collapsed has-dropdown"
+                    data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="false" aria-controls="settings">
+                    <img class="bi me-3" src="./assets/icon/settings.svg" alt="settings">
+                    Settings
+                    <img class="ms-auto dropdown-arrow" src="./assets/icon/arrow.svg" alt="arrow">
+                </a>
+                <ul id="settings" class="list-unstyled collapse collapse-transition" data-bs-parent="#sidebar">
+                    <li class="sidebar-item p-1"><a href="#"
+                            class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Regional</a></li>
+                    <li class="sidebar-item p-1"><a href="#"
+                            class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Category</a></li>
+                    <li class="sidebar-item p-1"><a href="#"
+                            class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Roles</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+</html>

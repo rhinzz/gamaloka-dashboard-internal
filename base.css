@@ -1,0 +1,102 @@
+:root {
+    --brand-color-50: #FFF4e9;
+    --primary: #ff8b13;
+    --white: #fff;
+    --neutral-color: #e6e6e6;
+    --gray: #f8f8f8;
+    --dark-gray: #666;
+    --black: #222;
+    --light-green: #E8F5E9;
+    --dark-green: #4CAF50;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: min-content 1fr;
+    background-color: var(--gray);
+    min-width: 100%;
+}
+
+header {
+    background-color: var(--white);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+header img {
+    border-radius: 50%;
+}
+
+main {
+    background-color: var(--gray);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    /* Grid for cards */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+main .card {
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+main .card p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+aside {
+    background-color: var(--white);
+    border-right: 1px solid var(--neutral-color);
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+aside .nav-pills {
+    --bs-nav-pills-link-active-bg: var(--brand-color-50);
+    --bs-nav-pills-link-active-color: var(--primary);
+}
+
+aside .collapse-transition {
+    transition: height 0.2s ease;
+    overflow: hidden;
+}
+
+aside #settings {
+    margin-left: 2.25rem;
+}
+
+aside .dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+aside .dropdown-arrow.rotate {
+    transform: rotate(180deg);
+}
+
+aside .link-body-emphasis {
+    color: var(--dark-gray) !important;
+}

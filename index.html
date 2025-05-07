@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./base.css">
     <title>Dashboard Internal</title>
 </head>
 
@@ -34,7 +35,7 @@
         </a>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item p-1 mb-2">
-                <a href="#" class="d-flex align-items-center nav-link fw-semibold active">
+                <a href="./index.html" class="d-flex align-items-center nav-link fw-semibold active">
                     <img class="bi me-3" src="./assets/icon/active/home.svg" width="20" height="20" alt="talent">
                     Dashboard
                 </a>
@@ -98,38 +99,212 @@
         <div class="card">
             <div class="cardHeader">
                 <h1 class="fw-bold">Subscriber</h1>
+                <div class="filter">
+                    <button id="filterSubscriberDays"><img src="./assets/icon/filter_date.svg" alt="filter_date">Last 90
+                        Days</button>
+                    <button id="filterSubscriberRegion"><img src="./assets/icon/filter_region.svg"
+                            alt="filter_region">All Regional</button>
+                </div>
             </div>
             <div class="chartBox">
                 <canvas id="firstChart" style="max-width: 300px;"></canvas>
-                <ul>
-                    <li><span style="background-color: #FFD54F;"></span>Jabodetabek<span class="value"></span></li>
-                    <li><span style="background-color: #B36600;"></span>Bandung <span class="value"></span></li>
-                    <li><span style="background-color: #FF8B13;"></span>Medan <span class="value"></span></li>
-                    <li><span style="background-color: #FFE5CC;"></span>Jateng & DIY <span class="value"></span></li>
-                    <li><span style="background-color: #C62828;"></span>Jatim <span class="value"></span></li>
-                    <li><span style="background-color: #EF9A9A;"></span>Bali <span class="value"></span></li>
-                </ul>
+                <ul id="subscribeChartValue"></ul>
             </div>
             <hr>
+            <div class="otherBox">
+                <div class="delta">
+                    <img id="deltaSubscribe" src="./assets/delta/increase.svg" alt="increase">
+                    <span id="subscribeDifference" class="green">72%</span>
+                    <p>dari <span id="subscribeDays">90</span> hari terakhir</p>
+                </div>
+                <a href="#">
+                    <div class="detail">
+                        See Detail
+                        <img src="./assets/icon/active/forward.svg" alt="next">
+                    </div>
+                </a>
+
+            </div>
         </div>
         <div class="card">
             <div class="cardHeader">
                 <h1 class="fw-bold">Unsubscriber</h1>
+                <div class="filter">
+                    <button id="filterUnsubscriberDays"><img src="./assets/icon/filter_date.svg" alt="filter_date">Last
+                        90 Days</button>
+                    <button id="filterUnsubscriberRegion"><img src="./assets/icon/filter_region.svg"
+                            alt="filter_region">All
+                        Regional</button>
+                </div>
+            </div>
+            <div class="chartBox">
+                <canvas id="secondChart" style="max-width: 300px;"></canvas>
+                <ul id="unsubscribeChartValue"></ul>
+            </div>
+            <hr>
+            <div class="otherBox">
+                <div class="delta">
+                    <img id="deltaSubscribe" src="./assets/delta/increase.svg" alt="increase">
+                    <span id="subscribeDifference" class="green">72%</span>
+                    <p>dari <span id="subscribeDays">90</span> hari terakhir</p>
+                </div>
+                <a href="#">
+                    <div class="detail">
+                        See Detail
+                        <img src="./assets/icon/active/forward.svg" alt="next">
+                    </div>
+                </a>
             </div>
         </div>
         <div class="card">
             <div class="cardHeader">
                 <h1 class="fw-bold">New Subscriber</h1>
+                <div class="filter">
+                    <button id="filterNewSubscriberDays"><img src="./assets/icon/filter_date.svg" alt="filter_date">Last
+                        90 Days</button>
+                    <button id="filterNewSubscriberRegion"><img src="./assets/icon/filter_region.svg"
+                            alt="filter_region">All
+                        Regional</button>
+                </div>
+            </div>
+            <canvas id="thirdChart" style="width: 100%;"></canvas>
+            <div class="lineChartData">
+                <div class="dataColumn">
+                    <div class="data">
+                        <div class="subHeading">
+                            <span style="background-color: #697586;"></span>
+                            <p>Bandung</p>
+                        </div>
+                        <h2>425</h2>
+                    </div>
+                    <div class="data">
+                        <div class="subHeading">
+                            <span style="background-color: #EF9600;"></span>
+                            <p>Jatim</p>
+                        </div>
+                        <h2>430</h2>
+                    </div>
+                </div>
+                <div class="dataColumn">
+                    <div class="data">
+                        <div class="subHeading">
+                            <span style="background-color: #0F6AF5;"></span>
+                            <p>Jabodetabek</p>
+                        </div>
+                        <h2>245</h2>
+                    </div>
+                    <div class="data">
+                        <div class="subHeading">
+                            <span style="background-color: #804C00;"></span>
+                            <p>Jateng & DIY</p>
+                        </div>
+                        <h2>430</h2>
+                    </div>
+                </div>
+                <div class="dataColumn">
+                    <div class="data">
+                        <div class="subHeading">
+                            <span style="background-color: #EC3D27;"></span>
+                            <p>Medan</p>
+                        </div>
+                        <h2>20</h2>
+                    </div>
+                    <div class="data">
+                        <div class="subHeading">
+                            <span style="background-color: #15B79E;"></span>
+                            <p>Bali</p>
+                        </div>
+                        <h2>130</h2>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="otherBox">
+                <div class="delta">
+                    <img id="deltaSubscribe" src="./assets/delta/increase.svg" alt="increase">
+                    <span id="subscribeDifference" class="green">72%</span>
+                    <p>dari <span id="subscribeDays">90</span> hari terakhir</p>
+                </div>
+                <a href="#">
+                    <div class="detail">
+                        See Detail
+                        <img src="./assets/icon/active/forward.svg" alt="next">
+                    </div>
+                </a>
             </div>
         </div>
         <div class="card">
             <div class="cardHeader">
                 <h1 class="fw-bold">Premium Subscriber</h1>
+                <div class="filter">
+                    <button id="filterPremiumSubscriberDays"><img src="./assets/icon/filter_date.svg"
+                            alt="filter_date">Last 90 Days</button>
+                    <button id="filterPremiumSubscriberRegion"><img src="./assets/icon/filter_region.svg"
+                            alt="filter_region">All
+                        Regional</button>
+                </div>
+            </div>
+            <div class="chartBox" id="premium">
+                <canvas id="fourthChart" style="max-width: 300px;"></canvas>
+                <ul id="premiumChartValue"></ul>
+            </div>
+            <hr>
+            <div class="otherBox">
+                <div class="delta">
+                    <img id="deltaSubscribe" src="./assets/delta/increase.svg" alt="increase">
+                    <span id="subscribeDifference" class="green">72%</span>
+                    <p>dari <span id="subscribeDays">90</span> hari terakhir</p>
+                </div>
+                <a href="#">
+                    <div class="detail">
+                        See Detail
+                        <img src="./assets/icon/active/forward.svg" alt="next">
+                    </div>
+                </a>
             </div>
         </div>
         <div class="card">
             <div class="cardHeader">
                 <h1 class="fw-bold">User Behavior Analysis</h1>
+                <div class="filter">
+                    <button id="filterUserSubscriberDays"><img src="./assets/icon/filter_date.svg"
+                            alt="filter_date">Last 90 Days</button>
+                    <button id="filterUserSubscriberRegion"><img src="./assets/icon/filter_region.svg"
+                            alt="filter_region">All
+                        Regional</button>
+                </div>
+            </div>
+            <div class="userBehaviorChartBox">
+                <div class="step">
+                    <p class="label">Step 1: Ketik “Saya Mau Loker”</p>
+                    <h2>425225 <span>Users</span></h2>
+                </div>
+                <div class="step">
+                    <p class="label">Step 2: Ketik Nama Lengkap</p>
+                    <h2>400000 <span>Users</span></h2>
+                </div>
+                <div class="step">
+                    <p class="label">Step 3: Pilih Lokasi</p>
+                    <h2>380000 <span>Users</span></h2>
+                </div>
+                <div class="step">
+                    <p class="label">Step 4: Upload CV</p>
+                    <h2>350000 <span>Users</span></h2>
+                </div>
+                <div class="step">
+                    <p class="label">Step 5: Upload Foto Profil</p>
+                    <h2>345000 <span>Users</span></h2>
+                </div>
+            </div>
+            <canvas id="userBehaviorChart" style="max-height: 300px"></canvas>
+            <hr>
+            <div class="otherBox" style="align-self: flex-end;">
+                <a href="#">
+                    <div class="detail">
+                        See Detail
+                        <img src="./assets/icon/active/forward.svg" alt="next">
+                    </div>
+                </a>
             </div>
         </div>
     </main>
@@ -137,6 +312,7 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/chartjs-chart-funnel@4.2.1/build/index.umd.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
