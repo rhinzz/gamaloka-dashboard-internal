@@ -1,3 +1,13 @@
+main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    /* Grid for cards */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
 main .card:nth-child(2n-1):last-child {
     grid-column: 1 / -1;
 }
@@ -115,7 +125,7 @@ main .card .lineChartData .dataColumn .data {
     padding-left: 0.75rem;
 }
 
-main .card .lineChartData .dataColumn .data .subHeading{
+main .card .lineChartData .dataColumn .data .subHeading {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -133,19 +143,19 @@ main .card .lineChartData .dataColumn .data span {
     width: 8px;
 }
 
-main .card .userBehaviorChartBox{
+main .card .userBehaviorChartBox {
     display: flex;
     justify-content: space-between;
     width: 95%;
     margin: 2rem 0;
 }
 
-main .card .userBehaviorChartBox .step .label{
+main .card .userBehaviorChartBox .step .label {
     font-size: 14px;
     margin-bottom: 1rem;
 }
 
-main .card .userBehaviorChartBox .step h2{
+main .card .userBehaviorChartBox .step h2 {
     font-weight: 700;
 }
 

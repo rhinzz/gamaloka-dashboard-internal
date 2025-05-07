@@ -41,13 +41,6 @@ header img {
 
 main {
     background-color: var(--gray);
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
-    /* Grid for cards */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
 }
 
 main .card {
