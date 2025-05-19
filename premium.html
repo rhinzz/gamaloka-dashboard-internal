@@ -12,6 +12,11 @@
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- DataTables -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.dataTables.css" />
+    <script defer src="https://cdn.datatables.net/2.3.0/js/dataTables.js"></script>
+    <link rel="stylesheet" href="./styles/premium.css">
     <link rel="stylesheet" href="./styles/base.css">
     <title>Dashboard Internal - Premium Plan</title>
 </head>
@@ -84,18 +89,90 @@
                     <img class="ms-auto dropdown-arrow" src="./assets/icon/arrow.svg" alt="arrow">
                 </a>
                 <ul id="settings" class="list-unstyled collapse collapse-transition" data-bs-parent="#sidebar">
-                    <li class="sidebar-item p-1"><a href="#"
+                    <li class="sidebar-item p-1"><a href="./settings/job-regional.html"
                             class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Regional</a></li>
-                    <li class="sidebar-item p-1"><a href="#"
+                    <li class="sidebar-item p-1"><a href="./settings/job-category.html"
                             class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Category</a></li>
-                    <li class="sidebar-item p-1"><a href="#"
+                    <li class="sidebar-item p-1"><a href="./settings/job-roles.html"
                             class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Roles</a></li>
                 </ul>
             </li>
         </ul>
     </aside>
+    <main class="main m-3">
+        <div class="card">
+            <div class="tableHeaderButton">
+                <button><img src="./assets/icon/upload.svg" alt="upload">Export</button>
+                <button><img src="./assets/icon/filter.svg" alt="filter">Filter</button>
+            </div>
+            <table id="premiumTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Plan Name</th>
+                        <th>Description</th>
+                        <th>Duration Plan</th>
+                        <th>Total Jobs</th>
+                        <th>Total Easy Apply</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GRATIS PREMIUM 7 HARI</td>
+                        <td>Gratis Paket premium dengan durasi 7 Hari</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>14000</td>
+                        <td>
+                            <button class="detail">
+                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                Detail
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GRATIS PREMIUM 7 HARI</td>
+                        <td>Gratis Paket premium dengan durasi 7 Hari</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>14000</td>
+                        <td>
+                            <button class="detail">
+                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                Detail
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+                $('#premiumTable').DataTable({
+                    layout: {
+                        topStart: {
+                            search: {
+                                placeholder: 'Find Plan'
+                            }
+                        },
+                        topEnd: null,
+                        bottomStart: 'pageLength',
+                        bottomEnd: null,
+                        bottom2Start: 'info',
+                        bottom2End: 'paging'
+                    },
+                    columnDefs: [
+                        { className: "dt-left", targets: "_all" }
+                    ]
+                });
+            });
+    </script>
     <script src="./scripts/script.js"></script>
 </html>

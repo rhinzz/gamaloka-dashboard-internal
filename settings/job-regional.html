@@ -16,17 +16,17 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.dataTables.css" />
     <script defer src="https://cdn.datatables.net/2.3.0/js/dataTables.js"></script>
-    <link rel="stylesheet" href="./styles/merchant.css">
-    <link rel="stylesheet" href="./styles/base.css">
-    <title>Dashboard Internal - Merchant</title>
+    <link rel="stylesheet" href="../styles/premium.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <title>Dashboard Internal - Regional Setting</title>
 </head>
 
 <body>
     <header class="header d-flex gap-3 align-items-center justify-content-end py-3 px-5">
         <a class="mx-2" href="#">
-            <img src="./assets/icon/bell.svg" alt="notification">
+            <img src="../assets/icon/bell.svg" alt="notification">
         </a>
-        <img src="./assets/icon/sample/profile.jpg" alt="profile-picture" width="40" height="40">
+        <img src="../assets/icon/sample/profile.jpg" alt="profile-picture" width="40" height="40">
         <div class="name">
             <p class="text-dark fw-semibold m-0 pb-1">Ivony Anastasia</p>
             <p class="text-secondary m-0">Superadmin</p>
@@ -35,48 +35,48 @@
     <aside id="sidebar" class="d-flex flex-column flex-shrink-0 px-3 py-4">
         <a href="/"
             class="d-flex align-items-center justify-content-center mb-4 link-body-emphasis text-decoration-none">
-            <img src="./assets/logo.png" alt="gamaloka-logo" width="137" height="30">
+            <img src="../assets/logo.png" alt="gamaloka-logo" width="137" height="30">
         </a>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item p-1 mb-2">
-                <a href="./index.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
-                    <img class="bi me-3" src="./assets/icon/home.svg" width="20" height="20" alt="talent">
+                <a href="../index.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="../assets/icon/home.svg" width="20" height="20" alt="talent">
                     Dashboard
                 </a>
             </li>
             <li class="p-1 mb-2">
-                <a href="./applicant.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
-                    <img class="bi me-3" src="./assets/icon/applicant.svg" width="20" height="20" alt="talent">
+                <a href="../applicant.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="../assets/icon/applicant.svg" width="20" height="20" alt="talent">
                     Applicant
                 </a>
             </li>
             <li class="p-1 mb-2">
-                <a href="./job.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
-                    <img class="bi me-3" src="./assets/icon/job.svg" width="20" height="20" alt="talent">
+                <a href="../job.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="../assets/icon/job.svg" width="20" height="20" alt="talent">
                     Job
                 </a>
             </li>
             <li class="p-1 mb-2">
-                <a href="./merchant.html" class="d-flex align-items-center nav-link fw-semibold active">
-                    <img class="bi me-3" src="./assets/icon/active/merchant.svg" width="20" height="20" alt="talent">
+                <a href="../merchant.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="../assets/icon/merchant.svg" width="20" height="20" alt="talent">
                     Merchant
                 </a>
             </li>
             <li class="p-1 mb-2">
-                <a href="./talent.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
-                    <img class="bi me-3" src="./assets/icon/talent.svg" width="20" height="20" alt="talent">
+                <a href="../talent.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="../assets/icon/talent.svg" width="20" height="20" alt="talent">
                     Talent Request
                 </a>
             </li>
             <li class="p-1 mb-2">
-                <a href="./premium.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
-                    <img class="bi me-3" src="./assets/icon/premium.svg" width="20" height="20" alt="talent">
+                <a href="../premium.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="../assets/icon/premium.svg" width="20" height="20" alt="talent">
                     Premium Plan
                 </a>
             </li>
             <li class="p-1 mb-2">
-                <a href="./blasting.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
-                    <img class="bi me-3" src="./assets/icon/blasting.svg" width="20" height="20" alt="talent">
+                <a href="../blasting.html" class="d-flex align-items-center nav-link fw-semibold link-body-emphasis">
+                    <img class="bi me-3" src="../assets/icon/blasting.svg" width="20" height="20" alt="talent">
                     Blasting
                 </a>
             </li>
@@ -84,16 +84,16 @@
                 <a href="#"
                     class="d-flex align-items-center nav-link fw-semibold link-body-emphasis collapsed has-dropdown"
                     data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="false" aria-controls="settings">
-                    <img class="bi me-3" src="./assets/icon/settings.svg" alt="settings">
+                    <img class="bi me-3" src="../assets/icon/settings.svg" alt="settings">
                     Settings
-                    <img class="ms-auto dropdown-arrow" src="./assets/icon/arrow.svg" alt="arrow">
+                    <img class="ms-auto dropdown-arrow" src="../assets/icon/arrow.svg" alt="arrow">
                 </a>
-                <ul id="settings" class="list-unstyled collapse collapse-transition" data-bs-parent="#sidebar">
-                    <li class="sidebar-item p-1"><a href="./settings/job-regional.html"
-                            class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Regional</a></li>
-                    <li class="sidebar-item p-1"><a href="./settings/job-category.html"
+                <ul id="settings" class="list-unstyled collapse show collapse-transition" data-bs-parent="#sidebar">
+                    <li class="sidebar-item p-1"><a href="./job-regional.html" class="sidebar-link nav-link fw-semibold active">Job
+                            Regional</a></li>
+                    <li class="sidebar-item p-1"><a href="./job-category.html"
                             class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Category</a></li>
-                    <li class="sidebar-item p-1"><a href="./settings/job-roles.html"
+                    <li class="sidebar-item p-1"><a href="./job-roles.html"
                             class="sidebar-link nav-link fw-semibold link-body-emphasis">Job Roles</a></li>
                 </ul>
             </li>
@@ -102,70 +102,80 @@
     <main class="main m-3">
         <div class="card">
             <div class="tableHeaderButton">
-                <button><img src="./assets/icon/upload.svg" alt="upload">Export</button>
-                <button><img src="./assets/icon/filter.svg" alt="filter">Filter</button>
+                <button>Create Job Regional</button>
             </div>
-            <table id="merchantTable" class="display">
+            <table id="jobRegionalTable" class="display">
                 <thead>
                     <tr>
-                        <th>Merchant Name</th>
-                        <th>Whatsapp</th>
-                        <th>Register Date</th>
+                        <th>Job Regional</th>
+                        <th>Regional Code</th>
+                        <th>Regional Alias</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Alia Coffee Shop</td>
-                        <td>08123456789</td>
-                        <td>01/01/2025</td>
+                        <td>Bandung</td>
+                        <td>d</td>
+                        <td>BDG</td>
                         <td>
                             <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                <img src="../assets/icon/view.svg" alt="view-detail">
                                 Detail
                             </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Alia Coffee Shop</td>
-                        <td>08123456789</td>
-                        <td>01/01/2025</td>
+                        <td>Jabodetabek</td>
+                        <td>b</td>
+                        <td>JBD</td>
                         <td>
                             <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                <img src="../assets/icon/view.svg" alt="view-detail">
                                 Detail
                             </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Alia Coffee Shop</td>
-                        <td>08123456789</td>
-                        <td>01/01/2025</td>
+                        <td>Jateng & DIY</td>
+                        <td>ab</td>
+                        <td>YGA</td>
                         <td>
                             <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                <img src="../assets/icon/view.svg" alt="view-detail">
                                 Detail
                             </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Alia Coffee Shop</td>
-                        <td>08123456789</td>
-                        <td>01/01/2025</td>
+                        <td>Jatim</td>
+                        <td>fd</td>
+                        <td>SBY</td>
                         <td>
                             <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                <img src="../assets/icon/view.svg" alt="view-detail">
                                 Detail
                             </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Alia Coffee Shop</td>
-                        <td>08123456789</td>
-                        <td>01/01/2025</td>
+                        <td>Bali</td>
+                        <td>bl</td>
+                        <td>DPS</td>
                         <td>
                             <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                <img src="../assets/icon/view.svg" alt="view-detail">
+                                Detail
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Medan</td>
+                        <td>bk</td>
+                        <td>MDN</td>
+                        <td>
+                            <button class="detail">
+                                <img src="../assets/icon/view.svg" alt="view-detail">
                                 Detail
                             </button>
                         </td>
@@ -178,19 +188,17 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-       $(document).ready(function () {
-            $('#merchantTable').DataTable({
+        $(document).ready(function () {
+            $('#jobRegionalTable').DataTable({
                 layout: {
                     topStart: {
                         search: {
-                            placeholder: 'Find Merchant'
+                            placeholder: 'Find Setting'
                         }
                     },
                     topEnd: null,
-                    bottomStart: 'pageLength',
+                    bottomStart: null,
                     bottomEnd: null,
-                    bottom2Start: 'info',
-                    bottom2End: 'paging'
                 },
                 columnDefs: [
                     { className: "dt-left", targets: "_all" }
@@ -198,7 +206,6 @@
             });
         });
     </script>
-    <script src="./scripts/script.js"></script>
-</body>
+    <script src="../scripts/script.js"></script>
 
 </html>

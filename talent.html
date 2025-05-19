@@ -12,6 +12,11 @@
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- DataTables -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.dataTables.css" />
+    <script defer src="https://cdn.datatables.net/2.3.0/js/dataTables.js"></script>
+    <link rel="stylesheet" href="./styles/talent.css">
     <link rel="stylesheet" href="./styles/base.css">
     <title>Dashboard Internal - Talent Request</title>
 </head>
@@ -94,8 +99,69 @@
             </li>
         </ul>
     </aside>
+    <main class="main m-3">
+        <div class="card">
+            <div class="tableHeaderButton">
+                <button><img src="./assets/icon/upload.svg" alt="upload">Export</button>
+                <button><img src="./assets/icon/filter.svg" alt="filter">Filter</button>
+            </div>
+            <table id="talentTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Merchant Name</th>
+                        <th>Total Employee</th>
+                        <th>Job Category</th>
+                        <th>Job Type</th>
+                        <th>Due Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alia Coffee Shop</td>
+                        <td>1</td>
+                        <td>Barista</td>
+                        <td>Full Time</td>
+                        <td>01/01/2025</td>
+                        <td class="talentRequestAction">
+                            <button class="detail">
+                                <img src="./assets/icon/view.svg" alt="view-detail">
+                                Detail
+                            </button>
+                            <button class="detail add">
+                                <img src="./assets/icon/plus.svg" alt="plus">
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+                $('#talentTable').DataTable({
+                    layout: {
+                        topStart: {
+                            search: {
+                                placeholder: 'Find Talent'
+                            }
+                        },
+                        topEnd: null,
+                        bottomStart: 'pageLength',
+                        bottomEnd: null,
+                        bottom2Start: 'info',
+                        bottom2End: 'paging'
+                    },
+                    columnDefs: [
+                        { className: "dt-left", targets: "_all" }
+                    ]
+                });
+            });
+    </script>
     <script src="./scripts/script.js"></script>
+</body>
+
 </html>
