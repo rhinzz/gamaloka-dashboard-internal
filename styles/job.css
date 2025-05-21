@@ -8,7 +8,7 @@ main .jobLog {
     margin-bottom: 2rem;
 }
 
-main .jobLog .card{
+main .jobLog .card {
     padding: 1rem;
 }
 
@@ -24,7 +24,7 @@ main .jobLog h3 {
     margin: 0;
 }
 
-main .jobLog .value{
+main .jobLog .value {
     display: flex;
     gap: 0.75rem;
     align-items: center;
@@ -61,4 +61,36 @@ table tbody .detail {
     align-items: center;
     gap: 0.5rem;
     padding: 8px 16px;
+}
+
+table tbody .detail.approve {
+    background-color: #FF8B13;
+    border: none;
+    color: #FFF;
+}
+
+.tab {
+    margin: 0;
+}
+
+.tab button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    background-color: #FFF;
+    border-bottom: 1px solid #EBEBEB;
+    color: #737373;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    border-bottom: 1px solid #FF8B13;
+    color: #FF8B13;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
 }

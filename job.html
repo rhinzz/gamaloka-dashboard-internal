@@ -128,173 +128,127 @@
         </div>
 
         <div class="card">
-            <div class="tableHeaderButton">
-                <button><img src="./assets/icon/upload.svg" alt="upload">Export</button>
-                <button><img src="./assets/icon/filter.svg" alt="filter">Filter</button>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openTable(event, 'allJobs')" id="defaultOpen">All Jobs</button>
+                <button class="tablinks" onclick="openTable(event, 'reviewJobs')">Need to be Review</button>
+                <button class="tablinks" onclick="openTable(event, 'adsJobs')">Ads Job</button>
             </div>
-            <table id="jobTable" class="display">
-                <thead>
-                    <tr>
-                        <th>Kode Loker</th>
-                        <th>Job Title</th>
-                        <th>Merchant</th>
-                        <th>Location</th>
-                        <th>Role</th>
-                        <th>Regional</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>A1234</td>
-                        <td>Full Time Barista</td>
-                        <td>Alia Coffee Shop</td>
-                        <td>Antapani, Bandung</td>
-                        <td>Barista / Drink Maker</td>
-                        <td>Bandung</td>
-                        <td>
-                            <button class="detail">
-                                <img src="./assets/icon/view.svg" alt="view-detail">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div id="allJobs" class="tabcontent">
+                <div class="tableHeaderButton">
+                    <button><img src="./assets/icon/upload.svg" alt="upload">Export</button>
+                    <button><img src="./assets/icon/filter.svg" alt="filter">Filter</button>
+                </div>
+                <table id="jobTable1" class="display">
+                    <thead>
+                        <tr>
+                            <th>Kode Loker</th>
+                            <th>Job Title</th>
+                            <th>Merchant</th>
+                            <th>Location</th>
+                            <th>Role</th>
+                            <th>Regional</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A1234</td>
+                            <td>Full Time Barista</td>
+                            <td>Alia Coffee Shop</td>
+                            <td>Antapani, Bandung</td>
+                            <td>Barista / Drink Maker</td>
+                            <td>Bandung</td>
+                            <td>
+                                <button class="detail">
+                                    <img src="./assets/icon/view.svg" alt="view-detail">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="reviewJobs" class="tabcontent">
+                <div class="tableHeaderButton">
+                    <button><img src="./assets/icon/upload.svg" alt="upload">Export</button>
+                    <button><img src="./assets/icon/filter.svg" alt="filter">Filter</button>
+                </div>
+                <table id="jobTable2" class="display">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Merchant</th>
+                            <th>Location</th>
+                            <th>Role</th>
+                            <th>Job Type</th>
+                            <th>Regional</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full Time Barista</td>
+                            <td>Alia Coffee Shop</td>
+                            <td>Antapani, Bandung</td>
+                            <td>Barista / Drink Maker</td>
+                            <td>Full Time</td>
+                            <td>Bandung</td>
+                            <td>
+                                <button class="detail approve">
+                                    <img src="./assets/icon/check.svg" alt="view-detail">
+                                    Approve
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="adsJobs" class="tabcontent">
+                <div class="tableHeaderButton">
+                    <button><img src="./assets/icon/upload.svg" alt="upload">Export</button>
+                    <button><img src="./assets/icon/filter.svg" alt="filter">Filter</button>
+                </div>
+                <table id="jobTable3" class="display">
+                    <thead>
+                        <tr>
+                            <th>Merchant Name</th>
+                            <th>Person in Charge</th>
+                            <th>Position</th>
+                            <th>Location</th>
+                            <th>Due Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alia Coffee Shop</td>
+                            <td>Alia</td>
+                            <td>Barista / Drink Maker</td>
+                            <td>Antapani, Bandung</td>
+                            <td>01/01/2025</td>
+                            <td>
+                                <button class="detail">
+                                    <img src="./assets/icon/view.svg" alt="view-detail">
+                                    Detail
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-         $(document).ready(function () {
-                $('#jobTable').DataTable({
+        $(document).ready(function () {
+            function initializeJobTable(tableId) {
+                $(tableId).DataTable({
                     layout: {
                         topStart: {
                             search: {
@@ -311,9 +265,15 @@
                         { className: "dt-left", targets: "_all" }
                     ]
                 });
+            }
+
+            ['#jobTable1', '#jobTable2', '#jobTable3'].forEach(function (tableId) {
+                initializeJobTable(tableId);
             });
+        });
     </script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/job-script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,58 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main .card {
+    width: 100%;
+}
+
+table {
+    border: 1px solid var(--Neutral-300, #E3E8EF);
+    border-radius: 0.5rem;
+}
+
+table tbody .detail {
+    border-radius: 0.5rem;
+    border: 0.75px solid #D9D9D9;
+    background: #FFF;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 16px;
+}
+
+.dt-left {
+    text-align: left;
+}
+
+.tableHeaderButton {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.tableHeaderButton button {
+    border-radius: 8px;
+    border: 0.75px solid #D9D9D9;
+    background: #FFF;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+.tableHeaderButton #convertCV {
+    background-color: #FF8B13;
+    border: none;
+    color: #FFF;
+}
+
+.tableHeaderButton .createJob {
+    background-color: #FF8B13;
+    border: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
